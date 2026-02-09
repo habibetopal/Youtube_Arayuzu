@@ -1,0 +1,197 @@
+﻿body{
+    background-color: rgb(0, 0, 0);
+}
+*{  /*bu hepsini kapsayıcı bir etiket*/
+    /*color: white;           asagoda hover icin baskın geliyor*/  
+    margin: 0;
+    padding: 0;
+}
+.bi bi-list{
+    color: aliceblue;
+    font-size: 70px;
+    margin-right: 60px;
+}
+.bi bi search{
+    color:beige;
+}
+header{
+   
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+
+}
+.header-wrapper{
+     display: flex;
+    justify-content: space-between;  /*altındaki aynı divdekileri yan yana sıraar diğer divdekileri alta gecip yanyana sıralar*/
+    align-items: center;             /*bu yüzden her div icin display flex yazıyoruz*/
+    height: 60px;  
+    padding: 10px 55px;
+    margin-top: 0px;
+}
+.header-left{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 3px;
+
+}
+.header-left i{
+    margin-right: 20px;
+}
+.header-left h3{
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    
+}
+.header-center{
+    display: flex;
+    align-items: center;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    column-gap: 50px;      /*flex ve gridde araları acar*/
+}
+.header-right .bi-person-circle{
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+ .bi-person-circle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header i{
+    font-size: 20px;
+    color: white;
+}
+.header-search{
+    border: 1px solid dimgray;
+    border-radius: 18px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-right: 150px;
+    height: 35px;
+    width: 180px;
+
+}
+
+.header-search input{
+    background-color: black;
+    border: none;
+    outline: none;
+    margin-left:-50px;
+    padding-top: 10px;
+  
+}
+.header-center .bi-search{
+    margin-left: 200px;
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-center .bi-mic{
+    background-color: rgb(50 42 42);
+    padding: 3px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-left: -130px; 
+}
+/*!   HEADER BİTTİ SİDEBAR SIRADA */
+
+.aside {
+    height: 100vh; /*full cizer*/
+    border-right: 1px solid rgb(50 42 42);
+    width: 80px;
+    padding: 20px 20px;
+    row-gap: 20px;
+    position: fixed;
+    z-index: 100;
+    background-color: rgb(0 0 0);
+}
+
+
+.aside-items{
+    display: flex;
+    align-items: flex-start;
+    row-gap: 20px;
+    justify-content: center;
+   
+}
+.aside-items a span:hover{  /*mouse götürünce mavi olsun istedim*/
+    color: blue;
+}
+
+
+
+.aside-buttons{
+    display: flex;  /*row-gap bunsuz calısmaz flex ve grid elemanı*/
+    flex-direction: column; /* Elemanları column yaparak alt alta dizdiğinde satırlar row-gap değerini aralarına yerleştirir*/
+    row-gap: 60px;
+   
+    
+}
+ .aside-items a{
+     display: flex;
+     flex-direction: column; /* İkonu ve metni alt alta diz */
+     align-items: center;
+     text-decoration: none;   /*aittaki cizgiyi siler*/
+     color: white;
+}  
+.sidebar i{ /*sidebardaki tüm iconlar*/
+        font-size: 20px;
+        color: white;
+
+}
+/*ASİDE BİTTİ*/
+
+.content {
+    display: flex;
+    padding-top: 80px;
+}
+.videos{
+    margin: 20px;
+   margin-left: 150px;
+}
+.video-list{
+    color : white;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+.video-image{
+    position:relative;
+}
+.video-image img{
+    width: 400px;
+    height:250px;
+}
+.video-image span{
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    padding: 0 4px;
+    background-color: rgb(95 85 85) ;
+}
+.video-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    margin-top: 5px;
+}
+.video-text a{
+    color: white;
+    text-decoration: none;
+    font-size:25px;
+    font-weight: bold;
+}
+.video-text span{
+    font-size: 12px;
+}
